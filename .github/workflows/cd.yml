@@ -1,0 +1,15 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Deploying to staging server..."
+      - run: echo "Using secret: ${{ secrets.DEPLOY_KEY }}"
