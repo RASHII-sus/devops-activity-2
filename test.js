@@ -6,4 +6,4 @@ if (true) {
 } else {
   console.error('Tests failed');
   process.exit(1);
-} // ❌ forces failure
+}
